@@ -1,0 +1,80 @@
+/* NAV MENU */
+header {
+	input[type="checkbox"] {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	header#header{
+		padding-bottom: 0px;
+		.div-nav-btn{
+			label i{
+				position: relative;
+				font-size: 36px;
+				line-height: 56px;
+
+				transition-property: opacity;
+				transition-duration: 0.5s;
+
+				&.fa-close{
+					opacity: 0;
+
+				}
+				&.fa-bars{
+					position: absolute;
+					right: 38px;
+
+				}
+			}
+			float:right;
+			margin-right: 40px;
+
+		}
+
+		nav {
+			float: unset;
+			margin-top: 78px;
+			padding: 0;
+			ul.nav-menu{
+				overflow: hidden;
+				max-height: 0;
+				padding: 0px 0 0 20px;
+				transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+
+			li, li.last{
+					width: 100%;
+					text-align: left;
+					padding-bottom: 20px;
+					font-size: 20px;
+					display: block;
+					margin: 0;
+				}
+			}			
+		}
+
+		/* Show nav-menu om checked */
+		#nav-btn:checked ~ nav ul.nav-menu {
+			display: block;
+
+			padding: 20px 0 0 20px;
+			max-height: 230px;
+		}
+
+		/* Hide bars icon on checked */
+		#nav-btn:checked ~ div label.nav-btn-icon .fa-bars {
+			opacity: 0;
+		}
+		/* Show close icon on checked */
+		#nav-btn:checked ~ div label.nav-btn-icon .fa-close {
+			opacity: 1;
+		}
+	}
+}
+
+@media only screen and (min-width: 769px){
+	.div-nav-btn{
+		display: none;
+	}
+
+}
