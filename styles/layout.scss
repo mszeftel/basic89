@@ -8,7 +8,11 @@ Licence: <a href="https://www.os-templates.com/template-terms">Website Template 
 
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
-body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;}
+body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#919191; background-color:#232323;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 .clear:after{content:"."; display:block; height:0; clear:both; visibility:hidden; line-height:0;}
 .clear{display:block; clear:both;}
@@ -42,7 +46,9 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 .row1, .row1 a{color:#C0BAB6; background-color:#333333;}
 .row2{color:#979797; background-color:#FFFFFF;}
 .row2 a{color:#FF9900; background-color:#FFFFFF;}
-.row3, .row3 a{color:#919191; background-color:#232323;}
+.row3{
+	a{color:#919191; background-color:#232323;}
+} 
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
@@ -106,7 +112,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 #container #homepage{display:block; width:100%; line-height:1.6em;}
 
-#container #homepage #services{padding:0 0 30px 0; border-bottom:1px solid #DEDEDE;}
+#container #homepage #services{padding:0 1% 30px 1%; border-bottom:1px solid #DEDEDE;}
 #container #homepage #services article{}
 #container #homepage #services figure{display:inline; float:left;}
 #container #homepage #services strong{float:left; margin:8px 0 0 10px; padding:0; font-size:14px; font-weight:bold; text-transform:uppercase;}
@@ -122,22 +128,23 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /* ------Main Content-----*/
 
-#container #content{float:left; width:630px; line-height:1.6em;}
+#container #content{float:left; line-height:1.6em;}
 
 #container #content #posts{}
 #container #content #posts ul{margin:0; padding:0; list-style:none;}
 #container #content #posts ul li{display:block; width:100%; margin-bottom:30px;}
 #container #content #posts ul li.last{ margin-bottom:0;}
 #container #content #posts ul li article{}
+
 #container #content #posts ul li article figure{}
-#container #content #posts ul li article figure img{float:left; width:180px; height:150px; margin:0; padding:4px; border:1px solid #D6D6D6;}
-#container #content #posts ul li article figure figcaption{display:block; float:right; width:410px;}
+#container #content #posts ul li article figure img{float:left; width:23%;/* height:150px; */margin:0; padding:4px; border:1px solid #D6D6D6;}
+#container #content #posts ul li article figure figcaption{display:block;}
 #container #content #posts ul li article figure h2{font-size:14px;}
 #container #content #posts ul li article figure footer{}
 
 /* ------Right Column-----*/
 
-#container #right_column{float:right; width:280px;}
+#container #right_column{float:right; max-width:190px;}
 #container #right_column h2.title{margin-bottom:15px; padding-bottom:15px; border-bottom:1px solid #DEDEDE;}
 
 #container #right_column nav{display:block; width:100%;}
@@ -149,7 +156,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{padding:20px 0;}
+#footer{padding:20px 0.5%;}
 #footer p{margin:0; padding:0;}
 
 /* HACER RESPONSIVE */
@@ -168,7 +175,127 @@ section a img{
 	margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 320px) {
+	*{
+		box-sizing: border-box;
+	}
+
+	#services article{
+		&.one_quarter,  &.three_quarter, &.two_quarter, &.four_quarter {
+			display: inline-block;
+			width: 98%;
+			margin: 0 1% 0;
+		}
+	}
+
+	#latest article{
+		margin: 0 1% 0;
+		& li.one_third, & li.two_third, & li.three_third {
+			display: inline-block;
+			width: 100%;
+			margin-right: 1%;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	#container #content{
+		width: 100%;
+		#posts{
+			margin: 0;
+			width: 100%;
+			
+			ul li article {
+				margin: 0 1% 0;
+				figure {
+					img{
+						float: left;
+						width: 40%;
+						height: auto;
+						margin: 0 5px 0 0;
+					}
+					box-sizing: border-box;
+					figcaption{
+						float: none;
+						width: 100%;
+						h2{
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#right_column{
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+	*{
+		box-sizing: border-box;
+	}
+
+	#services article{
+		&.one_quarter,  &.three_quarter, &.two_quarter, &.four_quarter {
+			display: inline-block;
+			width: 98%;
+			margin: 0 1% 0;
+		}
+	}
+
+	#latest article{
+		margin: 0 1% 0;
+		& li.one_third, & li.two_third, & li.three_third {
+			display: inline-block;
+			width: 49%;
+			margin-right: 1%;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	#container #content{
+		width: 100%;
+		#posts{
+			margin: 0;
+			width: 100%;
+			
+			ul li article {
+				margin: 0 1% 0;
+				figure {
+					img{
+						width: 35%;
+						height: auto;
+					}
+					box-sizing: border-box;
+					figcaption{
+						float: right;
+						width: 60%;
+					}
+				}
+			}
+		}
+	}
+
+	footer#footer p.fl_right{
+		float:left;
+		margin-top: 5px;
+	}
+
+	#right_column{
+
+		display: none;
+	}
+
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
 	*{
 		box-sizing: border-box;
 	}
@@ -177,7 +304,7 @@ section a img{
 		&.one_quarter,  &.three_quarter, &.two_quarter, &.four_quarter {
 			display: inline-block;
 			width: 48%;
-			margin: 0 1% 0;
+			margin: 0 0.5% 0;
 		}
 	}
 
@@ -187,10 +314,14 @@ section a img{
 			display: inline-block;
 			width: 32%;
 			margin-right: 1%;
+
 			img{
 				width: 100%;
 				height: auto;
 			}
+		}
+		& li.three_third{
+			margin-right: 0;
 		}
 	}
 	#container #content{
@@ -215,12 +346,45 @@ section a img{
 			}
 		}
 	}
-
+	
 	#right_column{
 		display: none;
 	}
 
+
+
 }
 
+@media only screen and (min-width: 769px){
 
+	#services article{
+		&.one_quarter,  &.three_quarter, &.two_quarter, &.four_quarter {
+			width: 23.5%;
+			display: inline-block;
+			margin: 0 0.5% 0;
+		}
+	}
+
+	#latest article{
+		margin: 0 1% 0;
+		& li.one_third, & li.two_third, & li.three_third {
+			display: inline-block;
+			width: 49%;
+			margin-right: 1%;
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	#container #content{
+		padding-left: 1%;
+		max-width: 75%;
+		#posts ul li article figure img{
+			margin-right: 10px;
+			width: 23%;
+		}
+	}
+}
 
