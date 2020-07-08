@@ -40,7 +40,7 @@ header {
 				overflow: hidden;
 				max-height: 0;
 				padding: 0px 0 0 20px;
-				transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+				transition: max-height 0.5s ease, padding 0.5s ease-out;
 
 			li, li.last{
 					width: 100%;

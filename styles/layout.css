@@ -8,6 +8,11 @@ Licence: <a href="https://www.os-templates.com/template-terms">Website Template 
 */
 /* Font Awesome */
 @import url(https://use.fontawesome.com/78f21670b1.css);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -324,7 +329,7 @@ input, textarea, select {
 #container section {
   display: block;
   width: 100%;
-  margin: 0 0 30px 0;
+  margin: 0 0 0 0;
   padding: 0;
 }
 
@@ -349,6 +354,8 @@ input, textarea, select {
 }
 
 #container #homepage #services {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0 1% 30px 1%;
   border-bottom: 1px solid #DEDEDE;
 }
@@ -387,6 +394,8 @@ input, textarea, select {
 }
 
 #container #homepage #latest article figure ul li img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 4px;
   border: 1px solid #D6D6D6;
 }
@@ -486,6 +495,8 @@ input, textarea, select {
 
 /*----------------------------------------------Footer-------------------------------------*/
 #footer {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 20px 0.5%;
 }
 
@@ -551,8 +562,8 @@ header input[type="checkbox"] {
     overflow: hidden;
     max-height: 0;
     padding: 0px 0 0 20px;
-    -webkit-transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    -webkit-transition: max-height 0.5s ease, padding 0.5s ease-out;
+    transition: max-height 0.5s ease, padding 0.5s ease-out;
   }
   header#header nav ul.nav-menu li, header#header nav ul.nav-menu li.last {
     width: 100%;
@@ -692,22 +703,22 @@ header input[type="checkbox"] {
   }
   #services article.one_quarter, #services article.three_quarter, #services article.two_quarter, #services article.four_quarter {
     display: inline-block;
-    width: 48%;
+    width: 49%;
     margin: 0 0.5% 0;
   }
   #latest article {
-    margin: 0 1% 0;
+    margin: 0 1% 0 1%;
   }
-  #latest article li.one_third, #latest article li.two_third, #latest article li.three_third {
+  #latest article li.one_third {
     display: inline-block;
     width: 32%;
-    margin-right: 1%;
+    margin-right: 2%;
   }
-  #latest article li.one_third img, #latest article li.two_third img, #latest article li.three_third img {
+  #latest article li.one_third img {
     width: 100%;
     height: auto;
   }
-  #latest article li.three_third {
+  #latest article li.one_third.lastbox {
     margin-right: 0;
   }
   #container #content {
@@ -739,7 +750,7 @@ header input[type="checkbox"] {
 
 @media only screen and (min-width: 769px) {
   #services article.one_quarter, #services article.three_quarter, #services article.two_quarter, #services article.four_quarter {
-    width: 23.5%;
+    width: 24%;
     display: inline-block;
     margin: 0 0.5% 0;
   }
